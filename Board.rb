@@ -1,5 +1,4 @@
 require 'colorize'
-require 'byebug'
 require_relative 'Tile'
 
 class Board
@@ -9,7 +8,6 @@ class Board
   end
 
   def self.from_file(sudoku_file='puzzle/sudoku1.txt')
-    # debugger
     file_grid = Array.new(9) { [] }
 
     raise "File does not exits" if !File.exist?(sudoku_file)

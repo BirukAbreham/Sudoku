@@ -10,9 +10,6 @@ class Game
     end
   end
 
-  def solved?
-  end
-
   def play
     system("clear")
     puts "Welcome to Sudoku puzzle game, enjoy!"
@@ -38,4 +35,9 @@ class Game
     puts "*** Sloved Sudoku Puzzle ***"
   end
 
+end
+
+if $PROGRAM_NAME == __FILE__
+  game = Game.new('puzzle/sudoku1.txt')
+  game.play
 end
